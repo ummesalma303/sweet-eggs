@@ -16,6 +16,7 @@ import {
 import { Link, NavLink } from 'react-router'
 import { IoMdMenu } from "react-icons/io";
 import logo from '../../assets/logo.png'
+import { ModeToggle } from "../mode-toggle";
 
 const Navbar = () => {
   return (
@@ -57,23 +58,24 @@ const Navbar = () => {
       </div>
 
     {/* desktop menu */}
-
+   
       <div className="hidden md:flex space-x-3">
       
         <NavLink to='/'>Home</NavLink>
-       
          <NavLink to='/add-foods'>Add Foods</NavLink> 
-       
-       
         <NavLink to='/all-foods'>All Foods</NavLink>
         {/* <Link href='/Contacts'>Contacts</Link> */}
         
       </div>
 
       <div className="flex space-x-2">
-        
+    {/* theme controller */}
+         <div className="">
+      <ModeToggle/>
+    </div>
+
       <Avatar>
-         <AvatarImage src={logo} alt="@foods" />
+         <AvatarImage src={''} alt="@foods" />
          
       <AvatarFallback>N/A</AvatarFallback>
     </Avatar>
